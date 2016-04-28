@@ -38,7 +38,7 @@ public class WeatherController {
 	@RequestMapping(value="/own/today")
 	public ModelAndView getOwnWeather(){
 		Weather weather = weatherService.findById(1);
-		ModelAndView result = new ModelAndView("/weather", "model", weather);
+		ModelAndView result = new ModelAndView("weather", "model", weather);
 		return result;
 	}
 	
